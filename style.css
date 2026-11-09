@@ -56,6 +56,16 @@ header {
     font-style: italic;
 }
 
+nav {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #eece10;
+    padding: 10px;
+    
+}
+
 nav ul {
     display: flex;
     list-style: none;
