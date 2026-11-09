@@ -1,0 +1,128 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px 40px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.title-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.school-info h1 {
+    font-size: 1.25rem;
+    color: #0d233a;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+
+.school-info span {
+    font-size: 0.75rem;
+    color: #555;
+    font-style: italic;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 22px; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #222;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+nav ul li a:hover {
+    color: #1a4480;
+}
+
+
+.btn {
+    background-color: #eeea00;
+    color: #fbf9f9 !important;
+    margin-top:50px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #d4cf00;
+}
+.line{
+    display: inline-block;
+    width:150px;
+    height:5px;
+    background-color: antiquewhite;
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+.banner {
+    
+    background: 
+        linear-gradient(rgba(0, 51, 153, 0.6), rgba(0, 51, 153, 0.6)), 
+        url('assets/background.png') no-repeat center center/cover;
+    
+    
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff; 
+}
+.form-group:has(input:focus) {
+    border-color: #000000;
+    box-shadow: 0 0 10px rgba(10, 92, 225, 0.4);
+}
+.form-group{
+    max-width:500px;
+    margin: px auto;
+    padding:15px;
+    background: white;
+    border: 2px solid #0b0b0b;
+    border-radius: 12px;
+    color:rgb(0, 0, 0,0.6);
+}
+
