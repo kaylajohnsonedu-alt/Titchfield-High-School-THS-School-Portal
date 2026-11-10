@@ -70,7 +70,7 @@ nav {
     align-items: center;
     background-color: #eece10;
     padding: 10px;
-    
+    position: sticky;
 }
 
 nav ul {
