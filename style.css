@@ -14,7 +14,6 @@ Mario Creary - 2504252 Friday 12pm - 2pm
 }
 
 body {
-    width: 100vw;  /* Edge-to-edge window width */
     height: 100dvh; /* Perfect mobile height fit */
 }
 
