@@ -112,7 +112,8 @@ nav ul li a:hover {
 .btn {
     /* background-color: #eeea00; */
     background-color: var(--color-accents-background);
-    color: #fbf9f9 !important;
+    /* color: #fbf9f9 !important; */
+    color: var(--color-accents-text);
     margin-top:50px;
     padding: 10px 20px;
     border-radius: 20px;
