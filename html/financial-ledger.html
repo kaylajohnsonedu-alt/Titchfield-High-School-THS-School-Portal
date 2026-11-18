@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="financial-ledger.css" />
+    <title>student1</title>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="assets/logo.png" alt="Finance logo" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Financial Ledger</h1>
+      <h3>Welcome to your financial ledger!</h3>
+
+      <!--Search Bar-->
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search by Student ID" />
+        <button type="button"><b>Search</b></button>
+        <button type="button" id="loadSampleData">Load Sample Data</button>
+      </div>
+      <div class="ledger-cards">
+        <div class="card">
+          <div>
+            <img class="card-imgs" src="assets/expected_fee.png" alt="Expected fees">
+          </div>
+          <div>
+            Expected Fees
+            <p id="expectedFees">0.00</p>
+          </div>         
+        </div>
+        <div class="card">
+          <div>
+            <img class="card-imgs" src="assets/collected.png" alt="Collected">
+          </div>
+          <div>
+            Collected
+            <p id="collectedFees">0.00</p>
+          </div>
+        </div>
+        <div class="card">
+          <div>
+            <img class="card-imgs" src="assets/outstanding.png" alt="Outstanding">
+          </div>
+          <div>
+            Outstanding
+          <p id="outstandingFees">0.00</p>
+          </div>
+        </div>
+        <div class="card">
+          <div>
+            <img class="card-imgs" src="assets/students.png" alt="Students">
+          </div>
+          <div>
+            Students
+            <p id="studentCount">0</p>
+          </div>
+        </div>
+      </div><br>
+      <div class="ledger">
+        <h2>LEDGER?</h2>
+        <h3>Ledger Entries</h3>
+        <p><i>&dArr; Add a new entry &dArr; </i></p>
+        <form id="ledgerInputs">
+          <label for="stuId">Student ID:</label>
+          <input type="text" id="stuId" placeholder="Student ID" required />
+          <label for="tranNum">Transaction Number:</label>
+          <input type="text" id="tranNum" inputmode="numeric" maxlength="12" pattern="[0-9]{12}" title="Enter exactly 12 digits." required placeholder="Enter exactly 12 digits" />
+          <label for="tranAmt">Transaction Amount:</label>
+          <input type="text" id="tranAmt" inputmode="decimal" pattern="[0-9]+(\.[0-9]{1,2})?" title="Enter an amount like 5000 or 5000.50" placeholder="Transaction Amount" required />
+          <label for="tranDate">Transaction Date:</label>
+          <input type="date" id="tranDate" required/>
+          <label for="tranType">Transaction Type:</label>
+          <select id="tranType" name="tranType" required>
+            <option value="">Select a transaction type</option>
+            <option value="Cash">Cash</option>
+            <option value="ATM / Counter">ATM / Counter</option>
+            <option value="Mobile Transfer">Mobile Transfer</option>
+          </select>
+          <button id="addEntry" type="submit">Add Entry</button>
+        </form>
+        <a class="history" href="TranHistory.html"><b>View Transaction History</b></a><br>
+
+        <h3>Records</h3>
+        <table class="ledger-table">
+          <thead>
+            <tr>
+              <th>Student ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Tuition Fees</th>
+              <th>Paid Amount</th>
+              <th>Outstanding Amount</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="ledger-entries">
+            <!-- Ledger entries will be added here -->
+          </tbody>
+
+        </table>
+      </div>
+    </main>
+    <footer>
+      <p>Virtute et eruditione</p>
+      <p>-By virtue and by learning</p>
+    </footer>
+    <script src="financial-ledger.js"></script>
+  </body>
+
+</html>
