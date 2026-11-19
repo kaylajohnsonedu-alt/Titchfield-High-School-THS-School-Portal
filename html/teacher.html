@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--
+Mario Creary    - 2504252 Friday 12pm - 2pm
+Nathan Mannings - 2501919 Friday 12pm - 2pm
+Damani Williams - 2007591 Friday 12pm - 2pm
+Jamelia Freeman - 2407243 Friday 12pm - 2pm
+Kayla Johnson   - 2409453 Friday 12pm - 2pm
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Workflow | Titchfield High School</title>
+    <!-- The style.css file contains general styles for the entire website. -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- The teacher.css file contains styles specific to the teacher workflow page. -->
+    <link rel="stylesheet" href="../css/teacher.css">
+</head>
+
+<body>
+
+    <!-- The header contains the school logo and name as well as a link back to the home page. -->
+    <header>
+        <a href="index.html" class="logo-container">
+            <img src="../assets/logo.png" alt="School logo" class="logo">
+            <div class="school-info">
+                <h1>Titchfield High School</h1>
+                <span>Virtute Et Eruditione</span>
+            </div>
+        </a>
+    </header>
+
+    <!-- The navigation menu provides links to the main pages of the website. -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="teacher.html" aria-current="page">Teacher Dashboard</a></li>
+            <!-- The logout button allows the user to log out of the teacher workflow. -->
+            <li><button type="button" id="logoutButton" class="nav-button">Logout</button></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="banner">
+            <div class="title-wrap teacher-wrap">
+
+                <h2>Teacher Workflow</h2>
+
+                <!-- This section displays the teacher's progress through the workflow steps. -->
+                <section>
+                    <h3>Your progress</h3>
+                    <p id="progressText" aria-live="polite">Step 1 of 4</p>
+                    <ol class="progress-list">
+                        <li id="progress1" class="active">Subject</li>
+                        <li id="progress2">Class</li>
+                        <li id="progress3">Grades</li>
+                        <li id="progress4">Report card</li>
+                    </ol>
+                </section>
+
+                <!-- This section allows the teacher to choose a subject from a dropdown menu. -->
+                <section id="step1" class="step-panel">
+                    <h2>Step 1: Choose a subject</h2>
+                    <label for="subjectSelect">Subject</label>
+                    <select id="subjectSelect">
+                        <option value="">-- Select one of the subjects --</option>
+                    </select>
+                    <p id="step1Message" class="message" role="alert"></p>
+                </section>
+
+                <!-- This section allows the teacher to choose a class from a dropdown menu and displays the students in that class. -->
+                <section id="step2" class="step-panel hidden">
+                    <h2>Step 2: Choose a class</h2>
+                    <label for="formSelect">Form level</label>
+                    <select id="formSelect">
+                        <option value="">-- Select a form level --</option>
+                    </select>
+                    <h3>Students in this class</h3>
+                    <ul id="classList"></ul>
+                    <p id="step2Message" class="message" role="alert"></p>
+                </section>
+
+                <!-- This section allows the teacher to enter grades for a selected assessment. -->
+                <section id="step3" class="step-panel hidden">
+                    <h2>Step 3: Enter grades</h2>
+
+                    <label for="assessmentSelect">Assessment</label>
+                    <select id="assessmentSelect">
+                        <option value="">-- Select an assessment --</option>
+                        <option value="Quiz 1">Quiz 1</option>
+                        <option value="Test 1">Test 1</option>
+                        <option value="Quiz 2">Quiz 2</option>
+                        <option value="Test 2">Test 2</option>
+                        <option value="Quiz 3">Quiz 3</option>
+                        <option value="Test 3">Test 3</option>
+                        <option value="Group Project">Group Project</option>
+                        <option value="Final Exam">Final Exam</option>
+                    </select>
+
+                    <label for="maxScoreInput">Marked out of</label>
+                    <input type="number" id="maxScoreInput" min="1">
+
+                    <!-- teacher.js builds one row per student inside this container -->
+                    <div id="gradeFormContainer"></div>
+
+                    <button type="button" id="saveGradesButton">Save grades</button>
+                    <p id="gradeMessage" class="message" role="alert"></p>
+                </section>
+
+                <!-- This section displays the report card for a selected student. -->
+                <section id="step4" class="step-panel hidden">
+                    <h2>Step 4: Report card</h2>
+                    <label for="reportStudentSelect">Student</label>
+                    <select id="reportStudentSelect">
+                        <option value="">-- Select a student --</option>
+                    </select>
+                    <div id="classStatsContainer">
+                        <p>Class Average: <span id="classAverage">0</span></p>
+                        <p>Highest Grade: <span id="classHighest">0</span></p>
+                        <p>Lowest Grade: <span id="classLowest">0</span></p>
+                        <p>Pass Rate: <span id="classPassRate">0</span></p>
+                    </div>
+                    <div id="reportCardContainer"></div>
+                </section>
+
+                <!-- Navigation buttons -->
+                <div class="step-buttons">
+                    <button type="button" id="backButton">Back</button>
+                    <button type="button" id="nextButton">Next</button>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Titchfield High School. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/login.js"></script>
+    <script src="../js/grades.js"></script>
+    <script src="../js/teacher.js"></script>
+</body>
+</html>
