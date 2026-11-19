@@ -1,0 +1,180 @@
+/*
+ * Members: Nathan Mannings - 2501919 Friday 12pm - 2pm
+ *          Damani Williams - 2007591 Friday 12pm - 2pm
+ *          Jamelia Freeman - 2407243 Friday 12pm - 2pm
+ *          Kayla Johnson   - 2409453 Friday 12pm - 2pm
+ *          Mario Creary    - 2504252 Friday 12pm - 2pm
+ */
+
+/* This class is used to hide elements */
+.hidden {
+    display: none;
+}
+
+/* This is the wrapper for the entire teacher page content */
+.teacher-wrap {
+    width: min(900px, 92%);
+    padding: 1.5rem 0;
+    gap: 1rem;
+}
+
+/* These are for the progress indicator */
+.progress-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.progress-list li {
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.progress-list li.active {
+    background-color: var(--color-accents-background);
+    color: var(--color-accents-text);
+    font-weight: bold;
+}
+
+/* These are for the step panels */
+.step-panel {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #222222;
+    text-align: left;
+}
+
+.step-panel label {
+    display: block;
+    margin: 0.75rem 0 0.25rem;
+    font-weight: 600;
+}
+
+.step-panel select,
+.step-panel input {
+    width: 100%;
+    max-width: 20rem;
+    padding: 0.6rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+#classList {
+    margin-left: 1.25rem;
+}
+
+/* This is for displaying messages (errors are red, successes are green) */
+.message {
+    min-height: 1.5rem;
+    margin-top: 0.75rem;
+    color: #b00020;
+    font-weight: 600;
+}
+
+.message.success {
+    color: #1b5e20;
+}
+
+/* This is for the step navigation buttons */
+.step-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Because style.css makes every button 20rem wide, these rules shrink these */
+.step-buttons button,
+.step-panel button {
+    width: auto;
+    min-width: 8rem;
+    margin-top: 1rem;
+}
+
+nav .nav-button {
+    width: auto;
+    padding: 0.35rem 0.9rem;
+}
+
+/* This is where visible keyboard focus is styled */
+button:focus-visible,
+select:focus-visible,
+input:focus-visible {
+    outline: 3px solid #1a4480;
+    outline-offset: 2px;
+}
+
+/* This ensures the step buttons stack vertically on small screens so they don't get squished */
+@media (max-width: 600px) {
+    .step-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* This ensures tables can scroll horizontally on small screens */
+#gradeFormContainer,
+#reportCardContainer {
+    overflow-x: auto;
+}
+
+.grade-table,
+.report-table {
+    width: 100%;
+    margin-top: 0.75rem;
+    border-collapse: collapse;
+}
+
+.grade-table th,
+.grade-table td,
+.report-table th,
+.report-table td {
+    padding: 0.6rem;
+    border: 1px solid #cccccc;
+    text-align: left;
+}
+
+.grade-table th,
+.report-table th {
+    background-color: var(--color-accents-background);
+    color: var(--color-accents-text);
+}
+
+/* This ensures every second row is light grey so long tables are easier to read */
+.report-table tr:nth-child(even),
+.grade-table tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+.grade-table input {
+    max-width: 8rem;
+}
+
+/* This is where the report card is displayed */
+.report-card-box {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 2px solid var(--color-accents-background);
+    border-radius: 8px;
+}
+
+/* This is where the class statistics (average, highest, lowest) are displayed*/
+#classStatsContainer {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    background-color: #f4f4f4;
+}
+
+#classStatsContainer p {
+    margin: 0.25rem 0;
+}
+
+/* This highlights a score box that failed validation */
+.grade-table input.invalid {
+    border: 2px solid #b00020;
+}
