@@ -22,7 +22,7 @@ body::before {
   content: ""; /* Required to generate the pseudo-element */
   position: fixed; /* Keeps the background in a fixed position relative to the viewport */
   inset: 0; /* Stretches the pseudo-element across all four sides of the viewport */
-  background-image: url(assets/background.png); /* Sets the background image */
+  background-image: url(../assets/background.png); /* Sets the background image */
   background-size: cover; /* Scales the image to cover the entire background */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   background-position: center center; /* Centres the background image horizontally and vertically */
@@ -109,7 +109,7 @@ footer {
   padding: 6.375rem 1.5rem 1.5rem; /* Adds spacing inside the footer */
   box-sizing: border-box; /* Includes padding and borders within the footer's dimensions */
   background-color: transparent; /* Makes the footer background colour transparent */
-  background-image: url("assets/footer.png"); /* Adds the footer background image */
+  background-image: url("../assets/footer.png"); /* Adds the footer background image */
   background-size: 100% 100%; /* Stretches the image to fill the footer */
   background-repeat: no-repeat; /* Prevents the background image from repeating */
   background-position: center bottom; /* Positions the background image at the bottom centre */
