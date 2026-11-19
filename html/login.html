@@ -1,0 +1,128 @@
+<!-- 
+Nathan Mannings - 2501919 Friday 12pm - 2pm
+Damani Williams - 2007591 Friday 12pm - 2pm
+Jamelia Freeman - 2407243 Friday 12pm - 2pm 
+Kayla Johnson   - 2409453 Friday 12pm - 2pm
+Mario Creary    - 2504252 Friday 12pm - 2pm
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Defines the character encoding to support a wide range of characters -->
+    <meta charset="UTF-8" />
+
+    <!-- Makes the webpage responsive to different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Establishes early connections to Google Fonts for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Imports Libre Baskerville font -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <!-- Imports Courier Prime font -->
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Imports Roboto font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Links the external CSS file responsible for styling the login page -->
+    <link rel="stylesheet" href="login.css" />
+
+    <!-- Sets the title displayed in the browser tab -->
+    <title>student1</title>
+
+    <!-- Links the JavaScript file and defers execution until the HTML is parsed -->
+    <script src="login.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Header section containing the website logo and navigation menu -->
+    <header>
+
+      <!-- Displays the finance logo; alt provides alternative text for accessibility -->
+      <img class="logo" src="assets/logo.png" alt="Finance logo" />
+
+      <!-- Navigation menu containing links to the website's pages -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main section containing the login form -->
+    <main>
+
+      <!-- Container groups the login heading and form together -->
+      <div class="login-container">
+
+        <!-- Heading identifying the purpose of the page -->
+        <h2>School Management Login</h2>
+
+        <!-- Login form; its ID allows JavaScript to access and handle form submission -->
+        <form id="loginForm">
+
+          <!-- Form group containing the username label and input -->
+          <div class="form-group">
+            <label for="username">Username</label>
+
+            <!-- Accepts the user's username; required prevents empty submission -->
+            <input
+              type="text"
+              id="username"
+              placeholder="Enter username"
+              required>
+          </div>
+
+          <!-- Form group containing the password label and input -->
+          <div class="form-group">
+            <label for="password">Password</label>
+
+            <!-- Password input masks the characters entered by the user -->
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter password"
+              required>
+          </div>
+
+          <!-- Form group containing the role selection menu -->
+          <div class="form-group">
+            <label for="role">Role</label>
+
+            <!-- Dropdown menu allows the user to select their account role -->
+            <select id="role" required>
+
+              <!-- Default option prompts the user to select a role -->
+              <option value="">Select Role</option>
+
+              <!-- Available account roles -->
+              <option value="administrator">Administrator</option>
+              <option value="teacher">Teacher</option>
+            </select>
+          </div>
+
+          <!-- Submits the login form and triggers its JavaScript submit handler -->
+          <button type="submit">Login</button>
+
+          <!-- Empty paragraph where JavaScript can display login messages -->
+          <p id="message"></p>
+
+        </form>
+      </div>
+    </main>
+
+    <!-- Footer section containing the school's motto and its translation -->
+    <footer>
+      <p>Virtute et eruditione</p>
+      <p>-By virtue and by learning</p>
+    </footer>
+
+  </body>
+</html>
