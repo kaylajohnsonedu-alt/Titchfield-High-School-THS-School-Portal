@@ -1,0 +1,219 @@
+/*
+  Nathan Mannings - 2501919 Friday 12pm - 2pm
+  Damani Williams - 2007591 Friday 12pm - 2pm
+  Jamelia Freeman - 2407243 Friday 12pm - 2pm 
+  Kayla Johnson   - 2409453 Friday 12pm - 2pm
+  Mario Creary    - 2504252 Friday 12pm - 2pm
+*/
+
+/* General styling applied to the entire webpage */
+body {
+  position: relative; /* Establishes a positioning context for positioned child elements */
+  display: flex; /* Enables Flexbox layout */
+  flex-direction: column; /* Arranges the header, main and footer vertically */
+  min-height: 100vh; /* Ensures the body is at least the full height of the viewport */
+  margin: 0; /* Removes the browser's default body margin */
+  background-color: #d6deef; /* Sets the background colour */
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* Creates a blurred background image behind the webpage content */
+body::before {
+  content: ""; /* Required to generate the pseudo-element */
+  position: fixed; /* Keeps the background in a fixed position relative to the viewport */
+  inset: 0; /* Stretches the pseudo-element across all four sides of the viewport */
+  background-image: url(assets/background.png); /* Sets the background image */
+  background-size: cover; /* Scales the image to cover the entire background */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center center; /* Centres the background image horizontally and vertically */
+  background-attachment: fixed; /* Keeps the background fixed while scrolling */
+  filter: blur(1.1px); /* Applies a slight blur to the background image */
+  z-index: -1; /* Places the background behind the other page content */
+}
+
+/* Styles the main header containing the logo and navigation */
+header {
+  box-sizing: border-box; /* Includes padding and borders within the element's dimensions */
+  position: relative; /* Establishes a positioning context for the logo */
+  display: flex; /* Enables Flexbox layout */
+  align-items: center; /* Vertically centres the header contents */
+  justify-content: space-between; /* Distributes available space between child elements */
+  width: 100%; /* Makes the header occupy the full available width */
+  min-height: 13vh; /* Sets the minimum height relative to the viewport height */
+  padding: 0.5rem 1.5rem clamp(0.75rem, 3vw, 1.5rem); /* Adds top, horizontal and responsive bottom padding */
+  background-color: rgba(1, 7, 58, 0.82); /* Applies a dark blue background with transparency */
+}
+
+/* Styles the website logo */
+.logo {
+  display: block; /* Makes the image a block-level element */
+  position: absolute; /* Positions the logo independently of the normal document flow */
+  top: clamp(-12rem, -40vw, -8rem); /* Sets a responsive vertical position within the specified limits */
+  left: 1.5rem; /* Positions the logo 1.5rem from the left of its containing block */
+  width: clamp(15rem, 40vw, 30rem); /* Sets a responsive width with minimum and maximum values */
+  height: 30rem; /* Sets the height of the logo */
+  object-fit: contain; /* Ensures the entire image fits without being cropped */
+  object-position: left center; /* Aligns the image to the left and vertically centres it */
+}
+
+/* Styles the unordered list containing the navigation links */
+nav ul {
+  display: flex; /* Arranges navigation items horizontally */
+  align-items: center; /* Vertically centres the navigation items */
+  gap: 1.5rem; /* Adds spacing between navigation items */
+  margin: 0; /* Removes the default unordered list margin */
+  padding: 0; /* Removes the default unordered list padding */
+  list-style: none; /* Removes the default bullet points */
+}
+
+/* Positions the navigation menu towards the right side of the header */
+header nav {
+  margin-left: auto; /* Pushes the navigation element to the right */
+}
+
+/* Styles the navigation links */
+nav a {
+  color: #fdfdfd; /* Sets the link text colour to white */
+  font-family: "Libre Baskerville", serif; /* Uses Libre Baskerville as the preferred font */
+  font-optical-sizing: auto; /* Allows optical font adjustments where supported */
+  font-weight: 700; /* Makes the text bold */
+  font-style: normal; /* Uses the normal font style */
+  text-decoration: none; /* Removes the default underline */
+}
+
+/* Changes the appearance of navigation links when hovered over */
+nav a:hover {
+  text-decoration: underline; /* Adds an underline when the user hovers over a link */
+  text-underline-offset: 0.375rem; /* Adds spacing between the text and underline */
+  color: rgb(255, 223, 0); /* Changes the link colour to yellow */
+}
+
+/* Styles the main content area */
+main {
+  position: relative; /* Establishes a positioning context */
+  flex: 1; /* Allows the main section to expand and occupy available vertical space */
+  z-index: 1; /* Places the main content above the background pseudo-element */
+  display: flex; /* Enables Flexbox layout */
+  justify-content: center; /* Horizontally centres the login container */
+  align-items: center; /* Vertically centres the login container */
+  padding: 2.5rem 2.8rem; /* Adds vertical and horizontal spacing around the main content */
+}
+
+/* Styles the footer section */
+footer {
+  position: relative; /* Establishes a positioning context */
+  z-index: 1; /* Places the footer above the background pseudo-element */
+  width: 100%; /* Makes the footer occupy the full available width */
+  min-height: clamp(8rem, 12vh, 12rem); /* Sets a responsive minimum height */
+  margin-top: 1.5rem; /* Adds space above the footer */
+  padding: 6.375rem 1.5rem 1.5rem; /* Adds spacing inside the footer */
+  box-sizing: border-box; /* Includes padding and borders within the footer's dimensions */
+  background-color: transparent; /* Makes the footer background colour transparent */
+  background-image: url("assets/footer.png"); /* Adds the footer background image */
+  background-size: 100% 100%; /* Stretches the image to fill the footer */
+  background-repeat: no-repeat; /* Prevents the background image from repeating */
+  background-position: center bottom; /* Positions the background image at the bottom centre */
+  text-align: center; /* Centres text horizontally */
+  display: flex; /* Enables Flexbox layout */
+  flex-direction: column; /* Arranges footer paragraphs vertically */
+  justify-content: center; /* Vertically centres the footer contents */
+  align-items: center; /* Horizontally centres the footer contents */
+}
+
+/* Styles paragraphs inside the footer */
+footer p {
+  margin: 0.25rem 0; /* Adds small vertical spacing around paragraphs */
+  font-family: "Libre Baskerville", serif; /* Uses Libre Baskerville */
+  font-style: italic; /* Makes the text italic */
+  font-size: 1.1rem; /* Sets the font size */
+  color: #ffffff; /* Makes the text white */
+}
+
+/* ---------------- LOGIN UI ---------------- */
+
+/* Styles the container holding the login heading and form */
+.login-container {
+  background: rgba(255,255,255,.15); /* Creates a semi-transparent white background */
+  backdrop-filter: blur(15px); /* Blurs the content behind the container */
+  border: 1px solid rgba(255,255,255,.3); /* Adds a subtle transparent border */
+  color: black; /* Sets the default text colour */
+  padding: 2.1875rem; /* Adds space between the container's content and its border */
+  border-radius: 0.9375rem; /* Rounds the container's corners */
+  box-shadow: 0 0.9375rem 2.1875rem rgba(0,0,0,0.8); /* Adds a shadow around the container */
+  border-top: 6px solid #f4c430; /* Adds a yellow border along the top */
+  width: clamp(19rem, 24vw, 22rem); /* Sets a responsive container width */
+}
+
+/* Styles the login heading */
+h2 {
+  text-align: center; /* Centres the heading */
+  margin-bottom: 20px; /* Adds space below the heading */
+  color: #333; /* Sets the heading colour to dark grey */
+}
+
+/* Groups each label and its corresponding form control */
+.form-group {
+  margin-bottom: 15px; /* Adds space between form groups */
+}
+
+/* Styles all form labels */
+label {
+  display: block; /* Places each label on its own line */
+  margin-bottom: 5px; /* Adds space between the label and its input */
+  font-weight: bold; /* Makes the label text bold */
+}
+
+/* Styles the input fields and dropdown menu */
+input, select {
+  width: 100%; /* Makes the controls occupy the full available width */
+  padding: 10px; /* Adds space inside the controls */
+  border: 1px solid #ccc; /* Adds a light grey border */
+  border-radius: 5px; /* Rounds the corners */
+}
+
+/* Styles the login button */
+button {
+  width: 100%; /* Makes the button occupy the full available width */
+  padding: 10px; /* Adds space inside the button */
+  background: #007bff; /* Sets the button background to blue */
+  color: white; /* Makes the button text white */
+  border: none; /* Removes the default button border */
+  border-radius: 5px; /* Rounds the button corners */
+  cursor: pointer; /* Changes the cursor to a pointer when hovered over */
+  font-size: 16px; /* Sets the button text size */
+}
+
+/* Changes the button background when hovered over */
+button:hover {
+  background: #0056b3; /* Changes the background to a darker blue */
+}
+
+/* Styles the paragraph used to display login messages */
+#message {
+  margin-top: 10px; /* Adds space above the message */
+  text-align: center; /* Centres the message text */
+  color: red; /* Displays the message in red */
+}
+
+/* ---------------- RESPONSIVE DESIGN ---------------- */
+
+/* Applies these styles when the viewport width is 500px or less */
+@media (max-width: 500px) {
+
+  /* Adjusts the logo position on smaller screens */
+  .logo {
+    top: clamp(-12rem, -60vw, -8rem); /* Changes the vertical position responsively */
+    object-position: center; /* Centres the image within its box */
+  }
+
+  /* Adjusts the navigation menu for smaller screens */
+  nav ul {
+    padding-top: 3.9rem; /* Adds space above the navigation links */
+    display: flex; /* Keeps navigation items arranged using Flexbox */
+  }
+
+  /* Reduces navigation link text size on smaller screens */
+  nav a {
+    font-size: 0.9rem; /* Makes navigation text smaller */
+  }
+}
