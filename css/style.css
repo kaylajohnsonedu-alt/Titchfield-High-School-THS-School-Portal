@@ -32,9 +32,31 @@ header {
 }
 
 footer {
-    margin-top: 0.5rem;
     color: var(--color-accents-text);
     text-align: center;
+}
+
+.site-footer {
+    background: #123456;
+    color: white;
+    font-size: 0.8rem;
+    padding: 30px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.site-footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 25px;
 }
 
 .container {
