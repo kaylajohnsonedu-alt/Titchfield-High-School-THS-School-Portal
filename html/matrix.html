@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Academic Matrix - Titchfield High School</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo-container">
+            <img src="assets/logo.png" alt="Titchfield High School Logo" class="logo">
+
+            <div class="school-info">
+                <h1>Titchfield High School</h1>
+                <span>Virtute Et Eruditione</span>
+            </div>
+        </a>
+    </header>
+        <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <h2 class="h2">System Administrator Dashboard</h2>
+
+        <div class="rectangle-matrix1">
+
+            <div class="rectangle-container">
+
+                <div class="rectangle-matrix2">
+
+                    <div class="row">
+
+                        <form id="filter-form">
+
+                            <div class="form-group">
+
+                                <label class="label" for="semester">
+                                    Semester Year:
+                                </label>
+
+                                <select class="input" id="semester" name="semester" required>
+
+                                    <option value="">Select Semester</option>
+                                    <option value="Autumn 2024">Autumn 2024</option>
+                                    <option value="Spring 2025">Spring 2025</option>
+                                    <option value="Summer 2025">Summer 2025</option>
+                                    <option value="Autumn 2025">Autumn 2025</option>
+                                    <option value="Spring 2026">Spring 2026</option>
+                                    <option value="Summer 2026">Summer 2026</option>
+
+                                </select>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+                <div class="rectangle-matrix3">
+
+                    <section class="grid-card">
+
+                        <div class="grid-header">
+
+                            <h2>Academic Matrix - Student Grade Data Grid</h2>
+
+                            <button type="button" class="btn-save" id="saveGrades">
+                                Save Grades
+                            </button>
+
+                        </div>
+
+                        <div class="table-wrapper">
+
+                            <table class="grade-table">
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th rowspan="2" class="col-check">
+                                            <input type="checkbox" id="selectAll"
+                                                aria-label="Select all students">
+                                        </th>
+
+                                        <th rowspan="2" class="col-id" scope="col">
+                                            Student ID
+                                        </th>
+
+                                        <th rowspan="2" class="col-name" scope="col">
+                                            Student Name
+                                        </th>
+
+                                        <th colspan="5" class="group-header" scope="colgroup">
+                                            Current Subjects
+                                        </th>
+
+                                        <th rowspan="2" class="col-action" scope="col">
+                                            Actions
+                                        </th>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <th scope="col">Mathematics</th>
+                                        <th scope="col">Science</th>
+                                        <th scope="col">English</th>
+                                        <th scope="col">History</th>
+                                        <th scope="col">Computer Science</th>
+
+                                    </tr>
+
+                                </thead>
+
+                                <tbody id="gradeGridBody">
+
+                                    <!-- Student records will be generated using JavaScript -->
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                        <div class="grid-footer">
+
+                            <span class="record-count" id="recordCount">
+                                Showing 0 of 0 students
+                            </span>
+
+                            <div class="pagination">
+
+                                <button type="button" class="page-btn text-btn" id="previousPage">
+                                    Previous
+                                </button>
+
+                                <button type="button" class="page-btn active" data-page="1">
+                                    1
+                                </button>
+
+                                <button type="button" class="page-btn" data-page="2">
+                                    2
+                                </button>
+
+                                <button type="button" class="page-btn" data-page="3">
+                                    3
+                                </button>
+
+                                <button type="button" class="page-btn text-btn" id="nextPage">
+                                    Next
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div>
+            <a href="registerIndex.html" class="btn">
+                Return to Home Screen
+            </a>
+        </div>
+
+    </main>
+
+<script src="matrix.js"></script>
+    <script src="login.js"></script>
+        checkAdmin();
+    </script>
+
+</body>
+</html>
+</body>
+</html>

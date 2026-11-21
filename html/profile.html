@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile - Titchfield High School</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+        <a href="#" class="logo-container">
+            <img src="assets/logo.png" alt="School logo" class="logo">
+            <div class="school-info">
+                <h1>Titchfield High School</h1>
+                <span>Virtute Et Eruditione</span>
+            </div>
+        </a>
+    </header>
+        <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="banner">
+            <div class="title-wrap">
+                <h1>Enrolled Student Profile</h1>
+                <div class="line"></div>
+
+                <div class="form-container profile-card-container\">
+                    
+                    <!-- Student Image Display -->
+                    <div class="profile-img-container" style="text-align: center; margin-bottom: 20px;">
+                        <img id="cardAvatar" src="" alt="Student Photo" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid #2c3e50;">
+                    </div>
+
+                    <h3>Personal Information</h3>
+                    <p><strong>Full Name:</strong> <span id="cardFullName"></span></p>
+                    <p><strong>Address:</strong> <span id="cardAddress"></span></p>
+                    <p><strong>Email:</strong> <span id="cardEmail"></span></p>
+                    <p><strong>Date of Birth:</strong> <span id="cardDOB"></span></p>
+                    <p><strong>Grade Level:</strong> <span id="cardGrade"></span></p>
+                    <p><strong>Previous School:</strong> <span id="cardPrevSchool"></span></p>
+
+                    <h3 style="margin-top: 20px;">Parent / Guardian Information</h3>
+                    <p><strong>Name:</strong> <span id="cardPGName"></span></p>
+                    <p><strong>Contact Number:</strong> <span id="cardPGContact"></span></p>
+
+                    <div style="margin-top: 30px; display: flex; gap: 10px;">
+                        <a href="register.html" class="btn" style="text-align: center; text-decoration: none; display: block; flex: 1;">Edit / Register Again</a>
+                    </div>
+
+
+                    <div style="margin-top: 30px; display: flex; gap: 10px;">
+                        <a href="register.html" class="btn" style="text-align: center; text-decoration: none; display: block; flex: 1;">Continue to Academic Matrix</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+  
+    <script src="profile.js" defer></script>
+</body>
+</html>
