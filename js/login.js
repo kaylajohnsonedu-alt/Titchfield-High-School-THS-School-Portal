@@ -66,12 +66,12 @@ if (loginForm) {
             if (validUser.role === "administrator") {
 
                 // Redirects the administrator to the admin dashboard
-                window.location.href = "admin.html";
+                window.location.href = "../html/matrix.html";
 
             } else {
 
                 // Redirects the teacher to the teacher dashboard
-                window.location.href = "teacher.html";
+                window.location.href = "../html/teacher.html";
             }
 
         } else {
