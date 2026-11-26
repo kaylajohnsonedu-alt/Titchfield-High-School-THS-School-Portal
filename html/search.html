@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!--
+    Nathan Mannings - 2501919 Friday 12pm - 2pm
+    Damani Williams - 2007591 Friday 12pm - 2pm
+    Jamelia Freeman - 2407243 Friday 12pm - 2pm
+    Kayla Johnson   - 2409453 Friday 12pm - 2pm
+    Mario Creary    - 2504252 Friday 12pm - 2pm
+
+    Jamelia Freeman - Finance and Reporting
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/common.css" />
+    <title>Query Wizard | THS</title>
+  </head>
+  <body>
+    <!--site navigation-->
+    <header>
+      <img class="logo" src="../assets/logo.png" alt="Finance logo" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="search.html" aria-current="page">Query Wizard</a></li>
+          <li><a href="financial-ledger.html">Financial Ledger</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="TranHistory.html">Transactions</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!--student search content-->
+    <main>
+      <div class="history-heading">
+        <h1>Query Wizard</h1>
+      </div>
+
+      <!--search for a student by id or name, with grade and status filters-->
+      <form class="search-bar student-search-form" id="studentSearchForm">
+        <label for="search-input">Student ID or Name:</label>
+        <input type="search" id="search-input" placeholder="Search by ID or name" />
+        <div class="filters">
+          <label for="searchGradeFilter">Grade:</label>
+          <select id="searchGradeFilter">
+            <option value="">All Grades</option>
+            <option value="7">Grade 7</option>
+            <option value="8">Grade 8</option>
+            <option value="9">Grade 9</option>
+            <option value="10">Grade 10</option>
+            <option value="11">Grade 11</option>
+            <option value="12">Grade 12</option>
+            <option value="13">Grade 13</option>
+          </select>
+          <label for="searchStatusFilter">Status:</label>
+          <select id="searchStatusFilter">
+            <option value="">All Statuses</option>
+            <option value="Paid">Paid</option>
+            <option value="Pending">Pending</option>
+            <option value="Outstanding">Outstanding</option>
+            <option value="No fee set">No fee set</option>
+          </select>
+        </div>
+        <button type="submit"><b>Search</b></button>
+      </form>
+      <p id="searchMessage" role="status" aria-live="polite">Enter a student ID or name to view their details.</p>
+
+      <!--matching students (choose View to open one student)-->
+      <h3>Results</h3>
+      <div class="table-responsive" role="region" aria-label="Matching students" tabindex="0">
+        <table class="ledger-table">
+          <thead>
+            <tr>
+              <th>Student ID</th>
+              <th>Name</th>
+              <th>Grade</th>
+              <th>Outstanding Amount</th>
+              <th>Status</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody id="searchResults">
+            <!--matching students are rendered here-->
+          </tbody>
+        </table>
+      </div>
+
+      <!--student details are filled after a student is chosen-->
+      <section class="student-profile-card" id="studentProfile" aria-live="polite" hidden>
+        <h2>Student Details</h2>
+        <div>
+          <span>Student ID</span>
+          <strong id="studentProfileId"></strong>
+        </div>
+        <div>
+          <span>First Name</span>
+          <strong id="studentProfileFirstName"></strong>
+        </div>
+        <div>
+          <span>Last Name</span>
+          <strong id="studentProfileLastName"></strong>
+        </div>
+        <div>
+          <span>Address</span>
+          <strong id="cardAddress"></strong>
+        </div>
+        <div>
+          <span>Email</span>
+          <strong id="cardEmail"></strong>
+        </div>
+        <div>
+          <span>Date of Birth</span>
+          <strong id="cardDOB"></strong>
+        </div>
+        <div>
+          <span>Grade Level</span>
+          <strong id="cardGrade"></strong>
+        </div>
+        <div>
+          <span>Previous School</span>
+          <strong id="cardPrevSchool"></strong>
+        </div>
+        <div>
+          <span>Parent Name</span>
+          <strong id="cardPGName"></strong>
+        </div>
+        <div>
+          <span>Parent Contact Number</span>
+          <strong id="cardPGContact"></strong>
+        </div>
+        <h2>Financial Statement</h2>
+        <div>
+          <span>Tuition Fees</span>
+          <strong id="cardTuition"></strong>
+        </div>
+        <div>
+          <span>Paid Amount</span>
+          <strong id="cardPaid"></strong>
+        </div>
+        <div>
+          <span>Outstanding Amount</span>
+          <strong id="cardDue"></strong>
+        </div>
+        <div>
+          <span>Status</span>
+          <strong id="cardStatus"></strong>
+        </div>
+      </section>
+
+      <section id="studentDetails" hidden>
+        <div class="history-heading">
+          <h3>Transactions</h3>
+          <button type="button" id="printStatement"><b>Print Statement</b></button>
+        </div>
+        <div class="table-responsive" role="region" aria-label="Student transactions" tabindex="0">
+          <table class="ledger-table">
+            <thead>
+              <tr>
+                <th>Student ID</th>
+                <th>Transaction Number</th>
+                <th>Transaction Amount</th>
+                <th>Transaction Date</th>
+                <th>Transaction Type</th>
+              </tr>
+            </thead>
+            <tbody id="tranHistory">
+              <!--matching student transactions are rendered here-->
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Grades</h3>
+        <div class="table-responsive" role="region" aria-label="Student grades" tabindex="0">
+          <table class="ledger-table">
+            <thead>
+              <tr>
+                <th>Subject</th>
+                <th>Semester</th>
+                <th>Assessment</th>
+                <th>Score</th>
+              </tr>
+            </thead>
+            <tbody id="gradesBody">
+              <!--saved grades are rendered here-->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Virtute et eruditione</p>
+      <p>-By virtue and by learning</p>
+    </footer>
+    <script src="../js/finance-common.js"></script>
+    <script src="../js/search.js"></script>
+  </body>
+
+</html>

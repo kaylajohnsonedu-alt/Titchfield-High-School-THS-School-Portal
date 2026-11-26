@@ -1,44 +1,70 @@
 <!DOCTYPE html>
+<!--
+    Nathan Mannings - 2501919 Friday 12pm - 2pm
+    Damani Williams - 2007591 Friday 12pm - 2pm
+    Jamelia Freeman - 2407243 Friday 12pm - 2pm
+    Kayla Johnson   - 2409453 Friday 12pm - 2pm
+    Mario Creary    - 2504252 Friday 12pm - 2pm
+
+    Jamelia Freeman - Finance and Reporting
+-->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/financial-ledger.css" />
-    <title>student1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/common.css" />
+    <title>Transaction History | THS</title>
   </head>
   <body>
-    <nav>
-
-    </nav>
+    <!--site navigation-->
+    <header>
+      <img class="logo" src="../assets/logo.png" alt="Finance logo" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="search.html">Query Wizard</a></li>
+          <li><a href="financial-ledger.html">Financial Ledger</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="TranHistory.html" aria-current="page">Transactions</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!--transaction history content-->
     <main>
       <div class="history-heading">
         <h1>Transaction History</h1>
-        <a class="history" href="financial-ledger.html"><b>Return to Ledger</b></a>
       </div>
-      
-      <table class="ledger-table">
-        <thead>
-          <tr>
-            <th>Student ID</th>
-            <th>Transaction Number</th>
-            <th>Transaction Amount</th>
-            <th>Transaction Date</th>
-            <th>Transaction Type</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody id="tranHistory">
-          <!-- Transaction history entries will be dynamically added here -->
-        </tbody>
-      </table>
-      
 
+      <!--transaction rows are populated by TranHistory.js-->
+      <div class="table-responsive" role="region" aria-label="Transaction history" tabindex="0">
+        <table class="ledger-table">
+          <thead>
+            <tr>
+              <th>Student ID</th>
+              <th>Transaction Number</th>
+              <th>Transaction Amount</th>
+              <th>Transaction Date</th>
+              <th>Transaction Type</th>
+              <th class="admin-only">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="tranHistory">
+            <!--transaction history entries will be dynamically added here-->
+          </tbody>
+        </table>
+      </div>
     </main>
     <footer>
       <p>Virtute et eruditione</p>
       <p>-By virtue and by learning</p>
     </footer>
-    <script src="../js/financial-ledger.js"></script>
+    <script src="../js/finance-common.js"></script>
+    <script src="../js/TranHistory.js"></script>
   </body>
 
 </html>

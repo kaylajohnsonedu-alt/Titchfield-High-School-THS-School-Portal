@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<!--
+Nathan Mannings - 2501919 Friday 12pm - 2pm
+Damani Williams - 2007591 Friday 12pm - 2pm
+Jamelia Freeman - 2407243 Friday 12pm - 2pm
+Kayla Johnson   - 2409453 Friday 12pm - 2pm
+Mario Creary    - 2504252 Friday 12pm - 2pm
+
+Jamelia Freeman - Finance and Reporting
+-->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,30 +17,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/financial-ledger.css" />
-    <title>Student</title>
+    <link rel="stylesheet" href="../css/common.css" />
+    <title>Financial Ledger | THS</title>
   </head>
   <body>
+    <!--site navigation-->
     <header>
-      <img class="logo" src="../assets/logo2.png" alt="Finance logo" />
+      <img class="logo" src="../assets/logo.png" alt="Finance logo" />
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="login.html">Login</a></li>
+          <li><a href="search.html">Query Wizard</a></li>
+          <li><a href="financial-ledger.html" aria-current="page">Financial Ledger</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="TranHistory.html">Transactions</a></li>
         </ul>
       </nav>
     </header>
+    <!--ledger page content-->
     <main>
       <h1>Financial Ledger</h1>
-      <h3>Welcome to your financial ledger!</h3>
-
-      <!--Search Bar-->
+      <h2 style="text-align: left; font-size: 15px;">Welcome to your financial ledger!</h2> <br>
+      <!--search bar-->
       <div class="search-bar">
         <input type="text" id="search-input" placeholder="Search by Student ID" />
         <button type="button"><b>Search</b></button>
-        <button type="button" id="loadSampleData">Load Sample Data</button>
       </div>
       <div class="ledger-cards">
         <div class="card">
@@ -41,7 +50,7 @@
           <div>
             Expected Fees
             <p id="expectedFees">0.00</p>
-          </div>         
+          </div>
         </div>
         <div class="card">
           <div>
@@ -58,7 +67,7 @@
           </div>
           <div>
             Outstanding
-          <p id="outstandingFees">0.00</p>
+            <p id="outstandingFees">0.00</p>
           </div>
         </div>
         <div class="card">
@@ -72,10 +81,10 @@
         </div>
       </div><br>
       <div class="ledger">
-        <h2>LEDGER?</h2>
+        <h2>LEDGER</h2>
         <h3>Ledger Entries</h3>
-        <p><i>&dArr; Add a new entry &dArr; </i></p>
-        <form id="ledgerInputs">
+        <p class="admin-only"><i>&dArr; Add a new entry &dArr; </i></p>
+        <form id="ledgerInputs" class="admin-only">
           <label for="stuId">Student ID:</label>
           <input type="text" id="stuId" placeholder="Student ID" required />
           <label for="tranNum">Transaction Number:</label>
@@ -95,30 +104,33 @@
         </form>
         <a class="history" href="TranHistory.html"><b>View Transaction History</b></a><br>
 
+        <!--student ledger records-->
         <h3>Records</h3>
-        <table class="ledger-table">
-          <thead>
-            <tr>
-              <th>Student ID</th>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Tuition Fees</th>
-              <th>Paid Amount</th>
-              <th>Outstanding Amount</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody id="ledger-entries">
-            <!-- Ledger entries will be added here -->
-          </tbody>
-
-        </table>
+        <div class="table-responsive" role="region" aria-label="Ledger records" tabindex="0">
+          <table class="ledger-table">
+            <thead>
+              <tr>
+                <th>Student ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Tuition Fees</th>
+                <th>Paid Amount</th>
+                <th>Outstanding Amount</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="ledger-entries">
+              <!--ledger entries will be added here-->
+            </tbody>
+          </table>
+        </div>
       </div>
     </main>
     <footer>
       <p>Virtute et eruditione</p>
       <p>-By virtue and by learning</p>
     </footer>
+    <script src="../js/finance-common.js"></script>
     <script src="../js/financial-ledger.js"></script>
   </body>
 
