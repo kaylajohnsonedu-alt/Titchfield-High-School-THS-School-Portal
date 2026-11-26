@@ -1,4 +1,4 @@
-
+/* Universal reset (change '-' to '*' so it applies to all elements) */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
+/* Sticky top header bar */
 header {
     display: flex;
     justify-content: space-between;
@@ -19,13 +19,17 @@ header {
     z-index: 1000;
 }
 
+/* Basic borders for tables and cells */
 .table, th, td {
-  border:1px solid black;
+  border: 1px solid black;
 }
 
-.th{
-background-color: #0652cb;
+/* Blue background for elements with class="th" */
+.th {
+  background-color: #0652cb;
 }
+
+/* Responsive grid container for cards */
 #cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -35,44 +39,50 @@ background-color: #0652cb;
   margin: 2rem auto;
   padding: 0 1rem;
 }
-.rectangle-container{
+
+/* Vertical full-height flex container */
+.rectangle-container {
     display: flex;
     flex-direction: column;
-    gap:12px;
+    gap: 12px;
     align-items: stretch;
     height: 100vh;
 }
 
-.rectangle-matrix1{
-    width: 100%vh;
+/* Large grey rectangle block (fix '100%vh' to '100%' or '100vw') */
+.rectangle-matrix1 {
+    width: 100%;
     height: 1000px;
     background-color: #a9a8a8;
-}   
-.row{
+}
+
+/* Horizontal flex row */
+.row {
     display: flex;
     flex-direction: row;
-    gap:12px;
+    gap: 12px;
     align-items: center;
 }
-.rectangle-matrix2{
-    
-    box-shadow:0 8px 20px rgba(0, 0, 0, 0.25);
-    padding:20px;
-    margin:20px;
+
+/* Elevated white rectangle block (added 'solid' so border renders) */
+.rectangle-matrix2 {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    margin: 20px;
     width: auto;
     height: 150px;
-    border:#000000 1px;
+    border: 1px solid #000000;
     background-color: #ffffff;
-}   
+}
 
-
+/* Base page styling */
 body {
   background-color: #f1f5f9;
   padding: 24px;
   color: #1e293b;
 }
 
-
+/* Card wrapper for the data/grade grid */
 .grid-card {
   background: #ffffff;
   border: 1px solid #cbd5e1;
@@ -83,7 +93,7 @@ body {
   margin: 40px;
 }
 
-
+/* Top bar inside the grid card */
 .grid-header {
   display: flex;
   justify-content: space-between;
@@ -92,12 +102,14 @@ body {
   gap: 16px;
 }
 
+/* Heading inside the grid header */
 .grid-header h2 {
   font-size: 1.15rem;
   font-weight: 700;
   color: #0f172a;
 }
 
+/* Primary save button */
 .btn-save {
   background-color: #2574a9;
   color: #ffffff;
@@ -110,11 +122,12 @@ body {
   transition: background-color 0.15s ease;
 }
 
+/* Hover state for save button */
 .btn-save:hover {
   background-color: #1d5d88;
 }
 
-/* Table Container */
+/* Scrollable wrapper around the table */
 .table-wrapper {
   width: 100%;
   overflow-x: auto;
@@ -122,6 +135,7 @@ body {
   border-radius: 8px;
 }
 
+/* Main grade/data table */
 .grade-table {
   width: 100%;
   border-collapse: collapse;
@@ -129,12 +143,13 @@ body {
   text-align: center;
 }
 
-/* Table Headers */
+/* Table header section */
 .grade-table thead {
   background-color: #e2e8f0;
   color: #0f172a;
 }
 
+/* Header and body cells */
 .grade-table th,
 .grade-table td {
   border: 1px solid #cbd5e1;
@@ -142,46 +157,52 @@ body {
   font-size: 0.9rem;
 }
 
+/* Header cell font weight */
 .grade-table th {
   font-weight: 600;
 }
 
+/* Spanning group header styling */
 .group-header {
   background-color: #dde5ee;
   font-size: 0.95rem;
 }
 
-/* Column Specific Alignment & Widths */
+/* Checkbox column width and alignment */
 .col-check {
   width: 44px;
   text-align: center;
 }
 
+/* ID column width and alignment */
 .col-id {
   width: 130px;
   text-align: left;
 }
 
+/* Name column width, alignment, and weight */
 .col-name {
   width: 170px;
   text-align: left;
   font-weight: 500;
 }
 
+/* Action icon column width */
 .col-action {
   width: 48px;
 }
 
-/* Alternating Row Colors */
+/* Alternating even row background */
 .grade-table tbody tr:nth-child(even) {
   background-color: #f8fafc;
 }
 
+/* Row hover highlight */
 .grade-table tbody tr:hover {
   background-color: #f1f5f9;
 }
 
-/* Editable Grade Cell Inputs */
+/* Editable grade input styling */
 .grade-input {
   width: 64px;
   padding: 5px 6px;
@@ -195,11 +216,13 @@ body {
   text-transform: uppercase;
 }
 
+/* Hover state for grade input */
 .grade-input:hover {
   border-color: #cbd5e1;
   background: #ffffff;
 }
 
+/* Focused or active state for grade input */
 .grade-input:focus,
 .grade-input.active {
   outline: none;
@@ -208,7 +231,7 @@ body {
   box-shadow: 0 0 0 2px rgba(37, 116, 169, 0.15);
 }
 
-/* Edit Pencil Icon Button */
+/* Edit icon button */
 .edit-btn {
   background: none;
   border: none;
@@ -219,12 +242,13 @@ body {
   border-radius: 4px;
 }
 
+/* Hover state for edit button */
 .edit-btn:hover {
   background-color: #e2e8f0;
   color: #0f172a;
 }
 
-/* Footer & Pagination */
+/* Footer bar for table info and pagination */
 .grid-footer {
   display: flex;
   justify-content: space-between;
@@ -236,12 +260,14 @@ body {
   gap: 12px;
 }
 
+/* Pagination button row */
 .pagination {
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
+/* Individual pagination button */
 .page-btn {
   background: transparent;
   border: 1px solid transparent;
@@ -252,10 +278,12 @@ body {
   cursor: pointer;
 }
 
+/* Hover state for pagination button */
 .page-btn:hover {
   background-color: #f1f5f9;
 }
 
+/* Active page button */
 .page-btn.active {
   background-color: #e2e8f0;
   border-color: #cbd5e1;
@@ -263,21 +291,23 @@ body {
   color: #0f172a;
 }
 
-.rectangle-matrix3{
-    
-    box-shadow:0 8px 20px rgba(0, 0, 0, 0.25);
-    padding:20px;
-    margin:20px;
+/* 500px elevated rectangle block (added 'solid' so border renders) */
+.rectangle-matrix3 {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    margin: 20px;
     width: auto;
     height: 500px;
-    border:#000000 1px;
+    border: 1px solid #000000;
     background-color: #ffffff;
-}  
+}
 
+/* Active profile card outline */
 .profile-card.active-profile {
   outline: 2px solid #2563eb;
 }
 
+/* Action buttons bar inside a card */
 .card-actions {
   display: flex;
   gap: 0.5rem;
@@ -285,13 +315,16 @@ body {
   padding-top: 0.75rem;
   border-top: 1px solid #f1f5f9;
 }
-.container{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+
+/* Centered vertical flex container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.container2{
+/* Compact white card container */
+.container2 {
     background-color: #ffffff;
     width: 380px;
     padding: 30px;
@@ -299,21 +332,24 @@ body {
     box-shadow: 0 8px 24px rgba(0,0,0,0.1);
 }
 
-.h2{
-    margin-top:0;
-    color:#000000;
-    text-align:center;
+/* Heading styled as a class */
+.h2 {
+    margin-top: 0;
+    color: #000000;
+    text-align: center;
 }
 
-.label{
-    display:block;
+/* Form field label */
+.label {
+    display: block;
     font-size: 13px;
     font-weight: bold;
     color: #555;
     margin-bottom: 5px;
 }
 
-.input,textArea{
+/* Text inputs and textareas */
+.input, textArea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -322,29 +358,33 @@ body {
     font-size: 14px;
 }
 
-.textArea{
+/* Textarea vertical resize and height */
+.textArea {
     resize: vertical;
     height: 80px;
 }
 
+/* General button styling */
 button {
     width: 100%;
     padding: 12px;
     background-color: #d4cf00;
-    color:white;
-    border:none;
+    color: white;
+    border: none;
     border-radius: 8px;
     font-size: 15px;
     font-weight: bold;
-    cursor:pointer;
+    cursor: pointer;
     transition: background-color 0.2s;
 }
 
-.profile-card{
+/* Centered profile card */
+.profile-card {
     text-align: center;
     background-color: #ffffff;
 }
 
+/* Larger profile container card */
 .profile-card-container {
     background-color: #ffffff;
     max-width: 550px;
@@ -355,56 +395,63 @@ button {
     text-align: left;
     color: #333;
 }
-.profile-img{
-    width:100px;
+
+/* Circular profile avatar image */
+.profile-img {
+    width: 100px;
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 15px;
     border: 3px solid #3498db;
-
 }
 
-.profile-name{
+/* Profile name heading */
+.profile-name {
     font-size: 22px;
     color: #2c3e50;
     margin: 0 0 5px 0;
 }
 
+/* Profile role/title subtitle */
 .profile-title {
-    color:#1a4480;
-    font-size:14px;
-    margin:0 0 15px 0;
+    color: #1a4480;
+    font-size: 14px;
+    margin: 0 0 15px 0;
     font-weight: bold;
-
 }
 
-.profile-details{
+/* Box for additional profile details */
+.profile-details {
     text-align: left;
     background-color: #f8f9fa;
-    padding:15px;
+    padding: 15px;
     border-radius: 8px;
     margin-bottom: 20px;
     font-size: 14px;
     color: #444;
 }
 
-.profile-details p{
+/* Spacing between profile detail lines */
+.profile-details p {
     margin: 8px 0;
 }
 
-.back-btn{
-    display:inline-block;
+/* Back button styling */
+.back-btn {
+    display: inline-block;
     padding: 10px 20px;
     background-color: #ecf0f1;
-    
-}
-.title-wrap{
-    display: flex;
-    flex-direction: column;
-    align-items:center;
 }
 
+/* Vertically centered title wrapper */
+.title-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Logo and text link container */
 .logo-container {
     display: flex;
     align-items: center;
@@ -412,11 +459,13 @@ button {
     text-decoration: none;
 }
 
+/* Logo image size */
 .logo {
     width: 80px;
     height: auto;
 }
 
+/* School/organization title heading */
 .school-info h1 {
     font-size: 1.25rem;
     color: #0d233a;
@@ -424,20 +473,22 @@ button {
     line-height: 1.1;
 }
 
-
+/* School/organization tagline */
 .school-info span {
     font-size: 0.75rem;
     color: #555;
     font-style: italic;
 }
 
+/* Horizontal navigation list */
 nav ul {
     display: flex;
     list-style: none;
     align-items: center;
-    gap: 22px; 
+    gap: 22px;
 }
 
+/* Navigation links */
 nav ul li a {
     text-decoration: none;
     color: #222;
@@ -446,15 +497,16 @@ nav ul li a {
     transition: color 0.2s;
 }
 
+/* Hover state for navigation links */
 nav ul li a:hover {
     color: #1a4480;
 }
 
-
+/* Pill-shaped call-to-action button */
 .btn {
     background-color: #eeea00;
     color: #fbf9f9 !important;
-    margin-top:50px;
+    margin-top: 50px;
     padding: 10px 20px;
     border-radius: 20px;
     font-weight: bold;
@@ -462,43 +514,94 @@ nav ul li a:hover {
     transition: background-color 0.2s;
 }
 
+/* Hover state for .btn */
 .btn:hover {
     background-color: #d4cf00;
 }
-.line{
+
+/* Decorative horizontal divider bar */
+.line {
     display: inline-block;
-    width:150px;
-    height:5px;
+    width: 150px;
+    height: 5px;
     background-color: rgb(255, 255, 255);
     margin-top: 10px;
     border-radius: 2px;
 }
 
-
+/* Full-height hero banner with blue overlay and background image */
 .banner {
-    
-    background: 
-        linear-gradient(rgba(0, 51, 153, 0.6), rgba(0, 51, 153, 0.6)), 
-        url('assets/background.png') no-repeat center center/cover;
-    
-    
+    background:
+        linear-gradient(rgba(0, 51, 153, 0.6), rgba(0, 51, 153, 0.6)),
+        url('/assets/background.png') no-repeat center center/cover;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff; 
+    color: #ffffff;
 }
+
+/* Focus highlight when an input inside .form-group is focused */
 .form-group:has(input:focus) {
     border-color: #000000;
     box-shadow: 0 0 10px rgba(10, 92, 225, 0.4);
 }
-.form-group{
-    max-width:500px;
-    margin: px auto;
-    padding:15px;
+
+/* Form group card container (fixed missing unit on margin) */
+.form-group {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 15px;
     background: white;
     border: 2px solid #0b0b0b;
     border-radius: 12px;
-    color:rgb(0, 0, 0,0.6);
+    color: rgb(0, 0, 0, 0.6);
 }
 
+/* Subtitle text styling */
+.subtitle {
+  color: #475569;
+  margin-bottom: 1.75rem;
+}
+
+/* Dropdown menu wrapper */
+.menu {
+  position: relative;
+  display: inline-block;
+  font-family: sans-serif;
+  padding: 30px;
+}
+
+/* Menu toggle trigger */
+.menu summary {
+  list-style: none;
+  font-size: 24px;
+  padding: 8px 12px;
+  background: #1e293b;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Floating dropdown panel */
+.menu nav {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: #1e293b;
+  border-radius: 6px;
+  min-width: 150px;
+}
+
+/* Links inside dropdown menu */
+.menu nav a {
+  display: block;
+  padding: 10px 14px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hover state for dropdown links */
+.menu nav a:hover {
+  background: #334155;
+}
