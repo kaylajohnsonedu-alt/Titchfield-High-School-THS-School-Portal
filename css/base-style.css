@@ -67,7 +67,7 @@ section a {
 
 section a:hover,
 section a:focus {
-    color: #004499;
+    color: var(--color-accents-background);
     text-decoration: underline;
 }
 
