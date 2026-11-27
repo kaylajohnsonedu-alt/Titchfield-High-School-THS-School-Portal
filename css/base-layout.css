@@ -1,0 +1,255 @@
+/*
+Nathan Mannings - 2501919 Friday 12pm - 2pm
+Damani Williams - 2007591 Friday 12pm - 2pm
+Jamelia Freeman - 2407243 Friday 12pm - 2pm
+Kayla Johnson   - 2409453 Friday 12pm - 2pm
+Mario Creary    - 2504252 Friday 12pm - 2pm
+*/
+
+/* ==========================================================================
+   Page Layout, Navigation Drawer, Header, Footer & Media Breakpoints
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   Structural Containers
+   -------------------------------------------------------------------------- */
+
+.main-content {
+    background:
+        linear-gradient(rgba(0, 51, 153, 0.6), rgba(0, 51, 153, 0.6)),
+        url("../assets/background.png") no-repeat center center / cover;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --------------------------------------------------------------------------
+   Site Header & Branding
+   -------------------------------------------------------------------------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.school-info h1 {
+    font-size: 1.25rem;
+    color: #0d233a;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.school-info span {
+    font-size: 0.75rem;
+    color: #555555;
+    font-style: italic;
+}
+
+/* --------------------------------------------------------------------------
+   Collapsible Navigation Drawer
+   -------------------------------------------------------------------------- */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 75px;
+    z-index: 1;
+    background: #333333;
+    overflow-x: hidden;
+    padding-top: 10px;
+    transition: width 0.6s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Expand drawer width on hover */
+.sidebar:hover {
+    width: 250px;
+}
+
+.sidebar ul {
+    position: relative;
+    height: 95%;
+}
+
+.sidebar ul li {
+    list-style: none;
+    margin: 5px 0;
+}
+
+.sidebar ul li:hover {
+    background: var(--color-accents-background);
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a {
+    position: relative;
+    display: flex;
+    white-space: nowrap;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.sidebar ul li a:hover {
+    color: var(--color-accents-text);
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li .logo {
+    margin-bottom: 80px;
+}
+
+.sidebar ul li .logo .text {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Pin the last navigation item (e.g., Login) to the bottom of the drawer */
+.sidebar ul li:last-child {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.sidebar ul li a .icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 75px;
+    height: 60px;
+    font-size: 22px;
+}
+
+.sidebar ul li a .text {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   Site Footer
+   -------------------------------------------------------------------------- */
+
+.site-footer {
+    background: #123456;
+    color: #ffffff;
+    font-size: 0.8rem;
+    padding: 30px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 10rem; /* Two values: first is row-gap, second is column-gap */
+    justify-content: center;
+}
+
+.footer-container section p span {
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-container section .material-icons {
+    font-size: 1rem;
+}
+
+.site-footer a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Media Breakpoints
+   -------------------------------------------------------------------------- */
+
+/* 1. Mobile Screens (Up to 480px) */
+@media screen and (max-width: 480px) {
+
+    main { align-items: flex-end; }
+    main h1 { padding-right: 2rem; }
+
+    .title-wrap { justify-content: flex-end; }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-card { width: 100%; }
+
+    #contact-form {
+        width: 100%;
+        max-width: 15.3rem;
+        margin-left: auto;
+    }
+
+    .input-group input, .input-group select, .input-group textarea, button { width: 15rem; }
+}
+
+/* 2. Tablet Screens (481px to 1024px) */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+
+    .title-wrap { justify-content: flex-end; }
+    main { align-items: flex-end; }
+    main h1 { padding-right: 2rem; }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-card { width: 100%; }
+
+    #contact-form {
+        width: 100%;
+        max-width: 1.3rem;
+        margin-left: auto;
+    }
+
+    .input-group input,
+    .input-group select,
+    .input-group textarea,
+    button {
+        width: 1rem;
+    }
+}
+
+/* 3. Desktop Screens (1025px and up) */
+@media screen and (min-width: 1025px) {
+
+    main { align-items: center; }
+    .footer-container { flex-direction: row; }
+    .about-card { width: 30%; }
+}

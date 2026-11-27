@@ -1,0 +1,231 @@
+/*
+Nathan Mannings - 2501919 Friday 12pm - 2pm
+Damani Williams - 2007591 Friday 12pm - 2pm
+Jamelia Freeman - 2407243 Friday 12pm - 2pm
+Kayla Johnson   - 2409453 Friday 12pm - 2pm
+Mario Creary    - 2504252 Friday 12pm - 2pm
+*/
+
+/* ==========================================================================
+   Global Reset, Typography, Banner, Cards & Timeline Styles
+   ========================================================================== */
+
+:root {
+    --color-accents-background: #eece10; /* Primary yellow accent for buttons and hover highlights */
+    --color-accents-text: #222222; /* High-contrast dark text paired with yellow accents */
+    --sidebar-collapsed-width: 75px; /* Default collapsed width of the navigation drawer */
+    --sidebar-expanded-width: 250px; /* Expanded width of the navigation drawer on hover */
+}
+
+/* --------------------------------------------------------------------------
+   Global Base Reset
+   -------------------------------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   Hero Banner & Title Wrapper
+   -------------------------------------------------------------------------- */
+
+.title-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.banner {
+    background:
+        linear-gradient(rgba(0, 51, 153, 0.6), rgba(0, 51, 153, 0.6)),
+        url("../assets/background.png") no-repeat center center / cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   Section Lists & Links
+   -------------------------------------------------------------------------- */
+
+section ul {
+    list-style-type: "✅ ";
+    padding: 2rem;
+    margin: 0;
+}
+
+section a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+section a:hover,
+section a:focus {
+    color: #004499;
+    text-decoration: underline;
+}
+
+section a:active {
+    color: #cc0000;
+}
+
+/* --------------------------------------------------------------------------
+   Content Cards, About Section & Status Messages
+   -------------------------------------------------------------------------- */
+
+.content-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 1rem 10px 5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    width: 75vw;
+    text-align: justify;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.about-h1,
+.about-h2 {
+    background: linear-gradient(to right, gold, cyan);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-paragraph,
+.about-table {
+    margin: 1rem;
+}
+
+.about-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 20px;
+    width: 75vw;
+    text-align: left;
+}
+
+.about-card {
+    position: relative;
+    width: 30%;
+    min-height: 240px;
+    padding: 24px 20px 20px;
+    text-align: left;
+}
+
+.about-card ul {
+    list-style-type: none;
+    padding: 0.8rem;
+    margin: 0;
+}
+
+.about-item strong {
+    display: block;
+    margin-top: 1rem;
+}
+
+.cell-width {
+    width: 10rem;
+}
+
+.error-message {
+    margin: 2rem 0;
+    background-color: red;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   History Timeline
+   -------------------------------------------------------------------------- */
+
+.timeline {
+    margin: 30px auto;
+    border-left: 5px solid #3498db;
+    padding-left: 25px;
+}
+
+.event {
+    width: 70vw;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    border-left: 6px solid;
+    box-shadow: 0 2px 6px #cccccc;
+    position: relative;
+}
+
+/* Timeline node marker aligned to the vertical axis */
+.event::before {
+    content: "";
+    position: absolute;
+    left: -38px;
+    top: 20px;
+    width: 18px;
+    height: 18px;
+    background: inherit;
+    border: 4px solid;
+    border-radius: 50%;
+}
+
+.event h2 {
+    margin: 0 0 8px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.event p {
+    margin: 0;
+    color: #ffffff;
+}
+
+/* Timeline color variants */
+.blue { border-color: #3498db; }
+.green { border-color: #2ecc71; }
+.orange { border-color: #e67e22; }
+.purple { border-color: #9b59b6; }
+.red { border-color: #e74c3c; }
+
+.blue .year { background-color: #3498db; }
+.green .year { background-color: #2ecc71; }
+.orange .year { background-color: #e67e22; }
+.purple .year { background-color: #9b59b6; }
+.red .year { background-color: #e74c3c; }
+
+.blue::before { border-color: #3498db; }
+.green::before { border-color: #2ecc71; }
+.orange::before { border-color: #e67e22; }
+.purple::before { border-color: #9b59b6; }
+.red::before { border-color: #e74c3c; }
+
+.year {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+    padding: 5px;
+    text-align: right;
+}
+
+@media (max-width: 500px) {
+    body {
+        padding: 15px;
+    }
+
+    .timeline {
+        padding-left: 20px;
+    }
+}
