@@ -1,7 +1,7 @@
 <!-- 
 Nathan Mannings - 2501919 Friday 12pm - 2pm
 Damani Williams - 2007591 Friday 12pm - 2pm
-Jamelia Freeman - 2407243 Friday 12pm - 2pm 
+Jamelia Freeman - 2407243 Friday 12pm - 2pm
 Kayla Johnson   - 2409453 Friday 12pm - 2pm
 Mario Creary    - 2504252 Friday 12pm - 2pm
 -->
@@ -11,13 +11,54 @@ Mario Creary    - 2504252 Friday 12pm - 2pm
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../css/base-style.css">
+    <link rel="stylesheet" href="../css/base-layout.css">
+    <link rel="stylesheet" href="../css/base-components.css">
     <title>Titchfield High School</title>
-    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
-    <header>
+    <!-- Site Navigation Drawer -->
+    <nav class="sidebar">
+        <ul>
+            <li>
+                <a href="index.html" class="logo">
+                    <span class="icon"><i class="material-icons">home</i></span>
+                    <span class="text">THS</span>
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <span class="icon"><i class="material-icons">home</i></span>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    <span class="icon"><i class="material-icons">diversity_3</i></span>
+                    <span class="text">About Us</span>
+                </a>
+            </li>
+            <li>
+                <a href="contact.html">
+                    <span class="icon"><i class="material-icons">email</i></span>
+                    <span class="text">Contact Us</span>
+                </a>
+            </li>
+            <li>
+                <a href="login.html">
+                    <span class="icon"><i class="material-icons">login</i></span>
+                    <span class="text">Login</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Site Header -->
+    <header class="site-header">
         <a href="index.html" class="logo-container">
             <img src="../assets/logo.png" alt="School logo" class="logo">
             <div class="school-info">
@@ -27,78 +68,403 @@ Mario Creary    - 2504252 Friday 12pm - 2pm
         </a>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
-    </nav>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- <div class="banner">
+            <div class="title-wrap"> -->
 
-    <main>
-        <div class="banner">
-            <div class="title-wrap">
+                <h1>About Us</h1>
 
-                <h1 class="about-h1">About Us</h1>
+                <div id="history" style="height: 10rem"></div>
+    <section class="timeline about-container" aria-label="School History">
 
-                <section class="content-card">
-                    <h2 class="about-h2">School History</h2>
-                    <p class="about-paragraph">
-                        Titchfield High School is a historic high school located at 22 Fort George Street in Port Antonio, Portland, Jamaica. Founded in January 1786, it stands as the fifth-oldest high school in Jamaica. <br /><br />
+        <article class="event blue">
+            <div class="year">Celebrating 240 years (1786-2026)</div>
+            <h2>School History</h2>
+            <p>Titchfield High School is a historic high school located at 22 Fort George Street in Port Antonio, Portland, Jamaica. Founded in January 1786, it stands as the fifth-oldest high school in Jamaica.</p>
+        </article>
 
-                        • <b> Foundation (1786): </b> Originally established as a "free school" under the Titchfield Trust to provide education in reading, writing, arithmetic, Greek, and Latin (primarily for poor white children of the era, as no formal system existed for enslaved children). <br /><br />
-                        • <b> Fort George Relocation (1883–1886): </b> The Jamaica School Commission took over management from the trust in 1883 and later relocated the school into the historic Fort George military barracks—a site originally built in 1729 featuring 10-foot walls and cannons overlooking the bay. <br /><br />
-                        • <b> The Major Plant Era (1885): </b> Headmaster Major W.H. Plant shaped and transformed the institution into a prominent modern school. <br /><br />
-                        • <b> Transition to Modern THS (1927): </b> The school completed its transition into the unified Titchfield High School operating across grades 7 through 13. <br /><br />
-                    </p>
-                </section>
+        <article class="event green">
+            <div class="year">1786</div>
+            <h2>Foundation</h2>
+            <p>Originally established as a "free school" under the Titchfield Trust to provide education in reading, writing, arithmetic, Greek, and Latin (primarily for poor white children of the era, as no formal system existed for enslaved children).</p>
+        </article>
 
-                <section class="content-card">
-                    <h2 class="about-h2">Landmark Accomplishments</h2>
-                    <p class="about-paragraph">
+        <article class="event orange">
+            <div class="year">1883–1886</div>
+            <h2>Fort George Relocation</h2>
+            <p>The Jamaica School Commission took over management from the trust in 1883 and later relocated the school into the historic Fort George military barracks—a site originally built in 1729 featuring 10-foot walls and cannons overlooking the bay.</p>
+        </article>
+
+        <article class="event purple">
+            <div class="year">1885</div>
+            <h2>The Major Plant Era</h2>
+            <p>Headmaster Major W.H. Plant shaped and transformed the institution into a prominent modern school.</p>
+        </article>
+
+        <article class="event red">
+            <div class="year">1927</div>
+            <h2>Transition to Modern THS</h2>
+            <p>The school completed its transition into the unified Titchfield High School operating across grades 7 through 13.</p>
+        </article>
+
+    </section>
+
+
+
+                <div id="accomplishments" style="height: 10rem"></div>
+                <section class="about-container">
+                    <h2> Landmark Accomplishments </h2>
+                    <p>
                         Titchfield High School's landmark accomplishments span over two centuries of pioneering education, national quiz championships, and historic athletic firsts in Jamaica.
-                        <br /><br />
-                        <b> Academic & Institutional Milestones </b> <br />
-                        • <b> Fifth-Oldest High School in Jamaica (1786). </b> Established in January 1786 under the Titchfield Trust, it is one of the Caribbean's oldest surviving secondary institutions. <br /><br />
-                        • <b> National Heritage Site Campus (1886). </b> Relocated into the historic 18th-century Fort George military barracks in Port Antonio, operating on grounds protected by the Jamaica National Heritage Trust. <br /><br />
-                        • <b> 2016 TVJ Schools' Challenge Quiz Champions. </b> Defeated Campion College to become the first rural school in nearly 20 years—and only the 13th school ever—to win Jamaica's premier high school quiz competition. <br /><br />
-                        • <b> 2025 TVJ Schools' Challenge Quiz Champions. </b> Captured their second national title by defeating Jamaica College 26–23 in the championship match. <br /><br />
-                        • <b> National Academic Honors. </b> Consistently maintains strong regional exam results (averaging 85% CSEC and 88% CAPE pass rates), producing top national CAPE students in Applied Mathematics and Electrical & Electronic Engineering Technology, as well as earning the Ministry of Education's Spirit of Care Award for overall academic and athletic excellence. <br /><br />
-                        <br />
-
-                        <b> Athletic Milestones </b> <br />
-                        • <b> First Back-to-Back Girls' Champs Winners (1963–1964). </b> Made history as the first school to win consecutive Inter-Secondary Schools Girls' Championships titles. <br /><br />
-                        • <b> Founding Member of the daCosta Cup (1950). </b> Competed as one of the four original schools in the inaugural rural schoolboy football season and went on to reach three daCosta Cup finals (1964, 1982, and 2003). <br /><br />
-                        • <b> Eastern Champs Dominance. </b> Captured the 2025 Eastern Athletics Championships and successfully defended the Eastern Champs boys' title in 2026, alongside winning national U-19 boys' table tennis titles. <br /><br />
-                        <br />
                     </p>
+
+                    <article class="about-card">
+                        <h3> Academic & Institutional Milestones </h3>
+                        <p>
+                            <span class="about-item"><strong> Fifth-Oldest High School in Jamaica (1786). </strong> Established in January 1786 under the Titchfield Trust, it is one of the Caribbean's oldest surviving secondary institutions. </span>
+                            <span class="about-item"><strong> National Heritage Site Campus (1886). </strong> Relocated into the historic 18th-century Fort George military barracks in Port Antonio, operating on grounds protected by the Jamaica National Heritage Trust. </span>
+                            <span class="about-item"><strong> National Academic Honors. </strong> Consistently maintains strong regional exam results (averaging 85% CSEC and 88% CAPE pass rates), producing top national CAPE students in Applied Mathematics and Electrical & Electronic Engineering Technology, as well as earning the Ministry of Education's Spirit of Care Award for overall academic and athletic excellence. </span>
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <h3> Academic & Institutional Milestones </h3>
+                        <p>
+                            <span class="about-item"><strong> 2016 TVJ Schools' Challenge Quiz Champions. </strong> Defeated Campion College to become the first rural school in nearly 20 years—and only the 13th school ever—to win Jamaica's premier high school quiz competition. </span>
+                            <span class="about-item"><strong> 2025 TVJ Schools' Challenge Quiz Champions. </strong> Captured their second national title by defeating Jamaica College 26–23 in the championship match. </span>
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <h3> Athletic Milestones </h3>
+                        <p>
+                            <span class="about-item"><strong> First Back-to-Back Girls' Champs Winners (1963–1964). </strong> Made history as the first school to win consecutive Inter-Secondary Schools Girls' Championships titles. </span>
+                            <span class="about-item"><strong> Founding Member of the daCosta Cup (1950). </strong>  Competed as one of the four original schools in the inaugural rural schoolboy football season and went on to reach three daCosta Cup finals (1964, 1982, and 2003). </span>
+                            <span class="about-item"><strong> Eastern Champs Dominance. </strong> Captured the 2025 Eastern Athletics Championships and successfully defended the Eastern Champs boys' title in 2026, alongside winning national U-19 boys' table tennis titles. </span>
+                        </p>
+                    </article>
+
                 </section>
 
-                <section class="content-card">
-                    <h2 class="about-h2">Master Directory</h2>
-                    <p class="about-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-                    <table class="about-table"><thead><td class="cell-width"><h3>Teachers</h3></td><td><h3>Assigned Academic Subjects</h3></td></thead><tbody>
-                        <tr> <td>Teacher 1</td>		<td>Maths</td>		</tr>
-                        <tr> <td>Teacher 2</td>		<td>English</td>	</tr>
-                        <tr> <td>Teacher 3</td>		<td>Information Technoloy</td> </tr>
-                        <tr> <td>Teacher 4</td>		<td>Biology</td>	</tr>
-                    </tbody></table>
+                <div id="directory" style="height: 10rem"></div>
+                <section class="about-container">
+                    <h2>Master Directory</h2>
+                        <p> &nbsp; 
+                        </p>
+
+                    <article class="about-card">
+                        <h3> Mathematics & Languages Departments </h3>
+                        <p>
+                            <span class="about-item"><strong> Ms. McLeod </strong> Mathematics / Additional Mathematics </span>
+                            <span class="about-item"><strong> Ms. Parkins </strong> Mathematics / Additional Mathematics </span>
+                            <span class="about-item"><strong> Mr. McKay </strong> Mathematics / Additional Mathematics </span>
+                            <span class="about-item"><strong> Ms. Elliot </strong> English Language / English Literature </span>
+                            <span class="about-item"><strong> Mrs. Monroe Allen </strong> English Language / English Literature </span>
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <h3> Science Department </h3>
+                        <p>
+                            <span class="about-item"><strong> Mr. Johns </strong> Science </span>
+                            <span class="about-item"><strong> Mrs. Capper Brown </strong> Biology </span>
+                            <span class="about-item"><strong> Ms. Edwards </strong> Biology </span>
+                            <span class="about-item"><strong> Ms. Monroe Campbell </strong> Chemistry </span>
+                            <span class="about-item"><strong> Ms. Russell </strong> Chemistry </span>
+                            <span class="about-item"><strong> Ms. McNaughton </strong> Physics </span>
+                            <span class="about-item"><strong> Mrs. Chin </strong> Physics </span>
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <h3> Humanities and Modern Languages Departments </h3>
+                        <p>
+                            <span class="about-item"><strong> Ms. Falconer </strong> History </span>
+                            <span class="about-item"><strong> Ms. Salmon </strong> History </span>
+                            <span class="about-item"><strong> Mr. Johnson </strong> Geography </span>
+                            <span class="about-item"><strong> Mr. Clunis </strong> Geography </span>
+                            <span class="about-item"><strong> Ms. Lee </strong> Social Studies </span>
+                            <span class="about-item"><strong> Ms. McGregor </strong> Spanish </span>
+                            <span class="about-item"><strong> Ms. Purrier </strong> French </span>
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <h3> Creative & Technical Department </h3>
+                        <p>
+                            <span class="about-item"><strong> Mrs. Murray Beckford </strong> Visual Arts </span>
+                            <span class="about-item"><strong> Mr. Todd </strong> Visual Arts </span>
+                            <span class="about-item"><strong> Mr. Rhoden </strong> Music </span>
+                            <span class="about-item"><strong> Ms. Duffus </strong> Music </span>
+                            <span class="about-item"><strong> Ms. Prince </strong> Technical Drawing </span>
+                            <span class="about-item"><strong> Mr. Gray </strong> Technical Drawing </span>
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <h3> Physical Education and Business & Technology Departments </h3>
+                        <p>
+                            <span class="about-item"><strong> Mr. Faulknor </strong> Physical Education </span>
+                            <span class="about-item"><strong> Ms. Rapley </strong> Physical Education </span>
+                            <span class="about-item"><strong> Mr. Faulknor </strong> Information Technology </span>
+                            <span class="about-item"><strong> Ms. Kayan Johnson </strong> Information Technology </span>
+                        </p>
+                    </article>
+
                 </section>
 
-            </div>
-        </div>
+
+                <div id="operations" style="height: 10rem"></div>
+                <section class="about-container">
+                    <h2> Contacts & Operational Basics </h2>
+                    <p>
+                        Titchfield High School operates out of its historic Fort George campus in Port Antonio, Jamaica, with administrative office hours running weekdays from 8:00 AM to 4:00 PM and Saturday mornings during the school term.
+                    </p>
+
+                    <article class="about-card">
+                        <h3> Contacts Directory </h3>
+                        <p>
+                            <span class="about-item"><strong> Physical Address. </strong> 22 Fort George Street, Port Antonio, Portland, Jamaica (located on the Titchfield Peninsula overlooking East and West Harbours) </span>
+                            <span class="about-item"><strong> Primary Landline & WhatsApp.</strong> 876-715-6051 (Main Office) and 876-878-4181 (WhatsApp) </span>
+                            <span class="about-item"><strong> Secondary / Ministry Lines. </strong> 876-993-2618 and 876-715-6912 </span>
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <h3> Department Emails </h3>
+                        <p>
+                            <span class="about-item"><strong> &#128073; General Inquiries: </strong> info@titchfieldhigh.edu.jm </span>
+                            <span class="about-item"><strong> &#128073; Principal's Office: </strong> principal@titchfieldhigh.edu.jm </span>
+                            <span class="about-item"><strong> &#128073; Admissions: </strong> admissions@titchfieldhigh.edu.jm </span>
+                            <span class="about-item"><strong> &#128073; Sixth Form: </strong> thssixthform@titchfieldhigh.edu.jm </span>
+                            <span class="about-item"><strong> &#128073; Bursary / Payments: </strong> bursary@titchfieldhigh.edu.jm </span>
+                            <span class="about-item"><strong> &#128073; Ministry of Education Address: </strong> titchfield.high.por@moey.gov.jm </span>
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <h3> Operational Basics & Governance </h3>
+                        <p>
+                            <span class="about-item"><strong> School Classification. </strong>  Co-educational Trust / Public Secondary High School accredited by the Ministry of Education, Skills, Youth & Information (MoESYI) under Region 2 (Portland). </span>
+                            <span class="about-item"><strong> Grades & Instruction. </strong>  Serves Grades 7–13 (ages 11–18), with instruction delivered in British English. </span>
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <h3> Operational Basics & Governance </h3>
+                        <p>
+                            <span class="about-item"><strong> Payments & Bursary. </strong>  Parent/guardian auxiliary and welfare fee payments are processed through the school's NCB Port Antonio account (Titchfield High School – Welfare Account, Account #841040333), with proof of payment submitted via email or WhatsApp to the Bursary. </span>
+                            <span class="about-item"><strong> Campus Accessibility. </strong> The campus features wheelchair-accessible entrances, parking, restrooms, and seating. </span>
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <h3>Office & School Hours </h3>
+                        <p>
+                            <span class="about-item"><strong> </strong> &#128188; Monday – Friday: 8:00 AM – 4:00 PM (with an ~8.5-hour daily school schedule during term) </span>
+                            <span class="about-item"><strong> </strong> &#128188; Saturday: 8:00 AM – 12:00 PM (Term time only) </span>
+                            <span class="about-item"><strong> </strong> &#128188; Sunday: Closed (hours vary during school holidays) </span>
+                        </p>
+                    </article>
+
+                </section>
+
+                <div id="academics" style="height: 10rem"></div>
+                <section class="about-container">
+                    <h2> Academics & Curriculum </h2>
+                    <p>
+                        Our institution offers a comprehensive secondary programme for grades 7–13 with pathways toward regional examinations and further study.
+                    </p>
+
+                    <article class="about-card">
+                        <h3> Core Curriculum </h3>
+                        <p>
+                            <span class="about-item"><strong> Mathematics </strong> Advanced mathematical concepts and problem-solving </span>
+                            <span class="about-item"><strong> English Language </strong> Communication skills and literary analysis </span>
+                            <span class="about-item"><strong> Sciences </strong> - Biology, Chemistry, and Physics </span>
+                            <span class="about-item"><strong> Social Sciences </strong> - History, Geography, and Social Studies </span>
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <h3> Elective Subjects </h3>
+                        <p>
+                            <span class="about-item"><br /> Additional Mathematics </span>
+                            <span class="about-item"><br /> Information Technology </span>
+                            <span class="about-item"><br /> Visual Arts </span>
+                            <span class="about-item"><br /> Music </span>
+                            <span class="about-item"><br /> Technical Drawing </span>
+                            <span class="about-item"><br /> Spanish </span>
+                            <span class="about-item"><br /> French </span>
+                            <span class="about-item"><br /> Physical Education </span>
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <h3> Examination Pathways </h3>
+                        <p>
+                            <span class="about-item"><strong> CSEC </strong> — Caribbean Secondary Education Certificate, generally associated with the secondary-level programme. Average CSEC Pass Rate is 85%. </span>
+                            <span class="about-item"><strong> CAPE </strong> — Caribbean Advanced Proficiency Examination, supporting advanced subject study and post-secondary preparation. Average CAPE Pass Rate is 88%. </span>
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <h3> Special Programs </h3>
+                        <p>
+                            <span class="about-item"><strong> STEM Initiatives </strong> Comprehensive Science, Technology, Engineering, and Mathematics programs preparing students for careers in emerging fields. </span>
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <h3> Special Programs </h3>
+                        <p>
+                            <span class="about-item"><strong> Academic Support </strong> Tutoring programs, career counseling, and preparation for regional and international competitions. </span>
+                        </p>
+                    </article>
+
+                </section>
+
+                <div id="admissions" style="height: 10rem"></div>
+                <section class="about-container">
+                    <h2>Admissions & Enrolment</h2>
+                    <p>
+                        Admissions to Titchfield High School follow Jamaica's public secondary school entry pathways—covering Grade 7 placement via the Primary Exit Profile (PEP), Sixth Form (Grades 12–13) applications, and student transfers.
+                    </p>
+
+                    <article class="about-card">
+                        <h3>1. Grade 7 Entry (PEP Placement)</h3>
+                        <p>
+                            <span class="about-item"><strong> Application Route.</strong> Incoming first-form students are placed through the Ministry of Education, Skills, Youth & Information (MoESYI) Primary Exit Profile (PEP). Parents select Titchfield High School among their seven school choices on the Grade 6 PEP registration form.</span>
+                            <span class="about-item"><strong> Registration Timeline.</strong> Following the release of PEP results in June, official registration for newly placed Grade 7 students typically takes place in late July (sorted alphabetically by surname/form group).</span>
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <h3>1. Grade 7 Entry (PEP Placement)</h3>
+                        <p>
+                            <span class="about-item"><strong> Standard Registration Documents.</strong> Per MoESYI Registration Guidelines, parents/guardians must present:</span>
+                                <ul>
+                                    <li> &#128073; Completed school registration form and passport-sized photographs </li>
+                                    <li> &#128073; Original Birth Certificate </li>
+                                    <li> &#128073; Up-to-date Immunization Card </li>
+                                    <li> &#128073; PEP placement/student report containing the child's Student Registration Number (SRN) </li>
+                                </ul>
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <h3>2. Sixth Form Entry (Grades 12–13 / CAPE)</h3>
+                        <p>
+                            <span class="about-item"><strong> Application Window.</strong> Sixth Form applications open immediately after CSEC results are released in mid-August and remain open for roughly one week (for example, mid-to-late August).</span>
+                            <span class="about-item"><strong> How to Apply.</strong>  Prospective Grade 12 students collect application forms from the school's main office (typically 8:30 AM – 2:00 PM during the application window) and attend a mandatory parent/student orientation meeting in the school auditorium.</span>
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <h3>2. Sixth Form Entry (Grades 12–13 / CAPE)</h3>
+                        <p>
+                            <span class="about-item"><strong> Required Documents.</strong> Applicants must submit:</span>
+                                <ul>
+                                    <li> &#128073; Completed Sixth Form application form </li>
+                                    <li> &#128073; Copy of CSEC examination results </li>
+                                    <li> &#128073; 1 passport-size photograph </li>
+                                </ul>
+                            <span class="about-item"><strong> Sixth Form Contact.</strong> Specific inquiries for Grade 12/13 placement are handled via thssixthform@titchfieldhigh.edu.jm</span>
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <h3>3. Student Transfers (Grades 7–11)</h3>
+                        <p>
+                            <span class="about-item"><strong> Step 1: Request Space.</strong> Parents submit a formal transfer request (along with the student's recent school reports and a character reference from their previous school) directly to Titchfield High School.</span>
+                            <span class="about-item"><strong> Step 2: Ministry Approval.</strong> Once Titchfield issues an Acceptance Letter, the parent obtains a Release Letter from the student's current school (both listing the student's name and SRN) and submits them with a request letter addressed to the Permanent Secretary at the MoESYI Regional Office for final approval.</span>
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <h3>Admissions Contact Information</h3>
+                        <p>
+                            You can confirm current availability, auxiliary fee payment plans, or form collection dates directly through the <a href="contact.html">Contact Page</a> or via the following:
+                                <ul>
+                                    <li> &#128073; Address: 22 Fort George Street, Port Antonio, Portland </li>
+                                    <li> &#128073; Phone / WhatsApp: 876-715-6051 (Landline) / 876-878-4181 (WhatsApp) </li>
+                                    <li> &#128073; Admissions Email: admissions@titchfieldhigh.edu.jm </li>
+                                    <li> &#128073; Office Hours: Monday – Friday, 8:00 AM – 4:00 PM </li>
+                                </ul>
+                        </p>
+                    </article>
+                </section>
+
+                <div id="community" style="height: 10rem"></div>
+                <section class="about-container">
+                    <h2> Community & People </h2>
+                    <p>
+                        The Titchfield High School community spans over 1,600 students, 100 faculty members, and a global network of more than 15,000 alumni.
+                    </p>
+
+                    <article class="about-card">
+                        <h3> Campus Leadership & Demographics </h3>
+                        <p>
+                            <span class="about-item"><strong> Current Leadership. </strong>  The school is led by Principal Richard A. Thompson alongside Board Chairman Mrs. Fay Neufville. </span>
+                            <span class="about-item"><strong> Student & Staff Body. </strong> Titchfield serves 1,600+ students across Grades 7–13 (ages 11–18), supported by a teaching faculty of roughly 101 educators. </span>
+                            <span class="about-item"><strong> School Spirit & Identity. </strong>  Students and staff rally behind the nicknames "Titch" and "1Titch", the cheers "Titchfield is the Greatest" and "Star of the East", and the school song "Follow Up! Follow Up!". </span>
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <h3> Student Life, Houses & Clubs </h3>
+                        <p>
+                            <span class="about-item"><strong> The Six Houses. </strong> Every student belongs to one of six houses named after influential past principals and benefactors: Brown, Chin, Geddes, Grossett, Plant, and Sherlock. </span>
+                            <span class="about-item"><strong> Student Leadership & Clubs. </strong> Beyond sports, student life centers on active governance (Prefect Body, Head Students, and Student Council) and extracurriculars. </span>
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <h3> Extracurricular Activities </h3>
+                        <p>
+                            <span class="about-item"><strong> Academic & Cultural Societies.</strong> Debate, Drama, Music, STEM, and Environmental clubs. </span>
+                            <span class="about-item"><strong> Publications & Traditions. </strong> Students produce the school newspaper, The Titchfield Peninsular, and participate in morning devotions, Founders' Day, Heritage Week, and annual talent shows. </span>
+                            <span class="about-item"><strong> Wellness & Peer Support. </strong> Campus programs include peer mentorship, academic tutoring, and dedicated student mental health and wellness counseling. </span>
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <h3> Local Port Antonio Ties & Outreach </h3>
+                        <p>
+                            <span class="about-item"><strong> Historic Titchfield Peninsula. </strong> Situated on the scenic peninsula overlooking Port Antonio's twin harbors, the school has served as a social and educational anchor for Portland Parish since its founding as a free school in 1786. </span>
+                            <span class="about-item"><strong> Community Health & Service. </strong>  The school regularly opens its Fort George campus to Port Antonio residents for public health fairs—offering free medical checks, blood pressure screenings, and blood sugar testing—alongside student-led parish service projects. </span>
+                            <span class="about-item"><strong> Honoring Local Educators. </strong> Campus landmarks celebrate long-serving community builders, such as the main driveway renamed in honor of former principal Lloyd O'Gilvie (who served from 1976 to 1992). </span>
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <h3> Global Alumni Network & PTA </h3>
+                        <p>
+                            <span class="about-item"><strong>  </strong> Titchfield maintains a highly active Parent-Teacher Association (PTA) and an international alumni network—coordinated through the Titchfield High School Alumni Network—that funds scholarships, library upgrades, and athletic programs. </span>
+                            <span class="about-item"><strong> THS Alumni Network (Jamaica). </strong> Founded in 1920 with over 5,000 members, leading local mentorship, infrastructure projects, and annual scholarship funds. </span>
+                            <span class="about-item"><strong> International Chapters. </strong>  Active diaspora branches operate in South Florida (which contributed over US$43,000 in 2025 toward scholarships and library upgrades), New York, and Ontario, Canada, alongside individual year-group associations (such as the Class of '83) and the Titchfield Past Students Sports Association (TPSSA). </span>
+                        </p>
+                    </article>
+
+                </section>
+
+                <div id="end" style="height: 10rem"></div>
+
+            <!-- </div>
+        </div> -->
     </main>
-   
+
+    <!-- Site Footer -->
     <footer class="site-footer">
         <div class="footer-container">
             <section id="connect">
-                <h3>Connect with Us</h3>
-                <p>22 Fort George Street, Port Antonio, Portland</p>
-                <p>Telephone: 876-715-6051</p>
-                <p>WhatsApp: 876-878-4181</p>
-                <p>Email: info@titchfieldhigh.edu.jm</p>
+                <h3>Titchfield High School</h3>
+                <p>22 Fort George Street, <br /> Port Antonio, Portland</p>
+                <p> <span> <i class="material-icons">phone</i> &nbsp; 876-715-6051 </span> </p>
+                <p> <span> <i class="material-icons">phone_android</i> &nbsp; 876-878-4181 </span> </p>
+                <p> <span> <i class="material-icons">email</i> &nbsp; info@titchfieldhigh.edu.jm </span> </p>
             </section>
             <section>
                 <h3>Quick Links</h3>
@@ -108,8 +474,8 @@ Mario Creary    - 2504252 Friday 12pm - 2pm
             </section>
             <section>
                 <h3>Social Media</h3>
-                <p> &nbsp; <a href="https://www.facebook.com/titchfieldhigh/">facebook</a></p>
-                <p> &nbsp; <a href="https://www.instagram.com/titchfieldhighschool/">Instagram</a></p>
+                <p> &nbsp; <a href="https://www.facebook.com/titchfieldhigh/"> <span> <i class="material-icons">laptop_chromebook</i> &nbsp; facebook </span> </a></p>
+                <p> &nbsp; <a href="https://www.instagram.com/titchfieldhighschool/"> <span> <i class="material-icons">camera_enhance</i> &nbsp; Instagram </span> </a></p>
             </section>
         </div>
         <p class="copyright">
